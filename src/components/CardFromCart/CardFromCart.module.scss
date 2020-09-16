@@ -1,0 +1,185 @@
+@import "../../cssModules/vars.module";
+
+.card {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid $border-grey;
+    &:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+}
+
+.product {
+    display: flex;
+    width: 50%;
+    text-decoration: none;
+}
+
+.img {
+    display: block;
+    max-height: 180px;
+    width: 90px;
+    margin-left: 20px;
+}
+
+.name {
+    width: 60%;
+    font-size: 25px;
+    color: $font-blue;
+    margin-top: 10px;
+    padding-left: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.quantity {
+    display: flex;
+    align-items: flex-start;
+    width: 16%;
+    margin-top: 20px;
+    .totalQuantity {
+        padding: 0 10px;
+        font-size: 20px;
+    }
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+}
+
+.price {
+    width: 16%;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.total {
+    width: 16%;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.removeItem {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all .1s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 900px){
+    .img {
+        max-height: 130px;
+    }
+    .name {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 650px){
+    .img {
+        max-height: 100px;
+    }
+    .name {
+        font-size: 15px;
+    }
+    .quantity {
+        .totalQuantity {
+            padding: 0 5px;
+            font-size: 15px;
+        }
+        .btn {
+            width: 20px;
+            height: 20px;
+            font-size: 15px;
+        }
+    }
+    .price {
+        font-size: 15px;
+    }
+    .total {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 450px){
+    .img {
+        max-height: 70px;
+        max-width: 100%;
+        margin-left: 10px;
+    }
+    .name {
+        width: 60%;
+        font-size: 13px;
+        margin-top: 0;
+        padding-left: 10px;
+    }
+    .quantity {
+        .totalQuantity {
+            font-size: 13px;
+        }
+        .btn {
+            width: 20px;
+            height: 20px;
+            font-size: 14px;
+        }
+    }
+    .price {
+        font-size: 12px;
+    }
+    .total {
+        font-size: 12px;
+    }
+    .removeItem {
+        position: absolute;
+        right: 0;
+        top: 15px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        transition: all .1s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+@media (max-width: 400px){
+    .img {
+        max-height: 60px;
+    }
+    .name {
+        font-size: 11px;
+    }
+    .quantity {
+        .totalQuantity {
+            font-size: 13px;
+        }
+        .btn {
+            width: 15px;
+            height: 15px;
+        }
+    }
+    .price {
+        padding-left: 10px;
+        font-size: 12px;
+    }
+    .total {
+        font-size: 12px;
+    }
+}

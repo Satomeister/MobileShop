@@ -1,0 +1,154 @@
+@import "../../cssModules/vars.module";
+
+.fullCard {
+    width: 100%;
+    max-width: 1370px;
+    margin: 80px auto 0;
+    padding: 0 15px;
+}
+
+.photoContainer {
+    display: flex;
+    position: fixed;
+    width: 40%;
+    .imgNav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-right: 7%;
+        transition: border .2s;
+        .imgItem {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            img {
+                max-width: 100%;
+                max-height: 110px;
+
+            }
+            &:hover {
+                border: 1px solid $green;
+                border-radius: 10px;
+            }
+        }
+        .imgItemActive {
+            border: 1px solid $green;
+            border-radius: 10px;
+        }
+    }
+    .photo {
+        display: block;
+        max-width: 100%;
+        max-height: 700px;
+        margin: 0 auto;
+    }
+}
+
+.content {
+    margin-left: 50%;
+    width: 50%;
+}
+
+.title {
+    padding: 20px 0;
+    font-size: 40px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: $font-blue;
+}
+
+.buy {
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: 500;
+    white-space: nowrap;
+    color: darkgreen;
+}
+
+.about {
+    margin-top: 20px;
+    font-size: 20px;
+    color: $font-black;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+@media (max-width: 1300px) {
+    .photoContainer .photo {
+        max-height: 500px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .photoContainer .imgNav .imgItem img, .photoContainer .imgNav .imgItemActive img{
+        max-height: 90px;
+    }
+    .photoContainer .photo {
+        max-height: 400px;
+    }
+    .title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .photoContainer .imgNav .imgItem img, .photoContainer .imgNav .imgItemActive img{
+        max-height: 70px;
+    }
+    .photoContainer .photo {
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 850px) {
+    .photoContainer .imgNav .imgItem img, .photoContainer .imgNav .imgItemActive img{
+        max-height: 60px;
+    }
+    .photoContainer .photo {
+        max-height: 300px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .about {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 730px) {
+    .photoContainer .imgNav .imgItem img, .photoContainer .imgNav .imgItemActive img{
+        max-height: 50px;
+    }
+    .photoContainer .photo {
+        max-height: 250px;
+    }
+    .title {
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+    .about {
+        margin-top: 10px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 650px) {
+    .fullCard {
+        display: flex;
+        flex-direction: column;
+    }
+    .photoContainer {
+        position: unset;
+        width: 100%;
+    }
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+}

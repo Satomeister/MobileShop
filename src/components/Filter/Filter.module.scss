@@ -1,0 +1,134 @@
+@import '../../cssModules/vars.module';
+
+.filter {
+    width: 22%;
+}
+
+.select {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: 2px solid $border-grey;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.brands {
+    width: 100%;
+    padding: 20px;
+    border: 2px solid $border-grey;
+    border-radius: 3px;
+    background: $base-grey;
+}
+
+.brandText {
+    margin: 0;
+    font-weight: 600;
+    color: $font-black;
+}
+
+.brandList {
+    margin: 10px 0 0;
+    padding-left: 0;
+    border-radius: 5px;
+    background: $base-white;
+}
+
+.brand {
+    display: block;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 10px;
+    border: 2px solid $border-grey;
+    border-bottom: none;
+    font-size: 17px;
+    font-weight: 500;
+    color: $font-black;
+    cursor: pointer;
+    &:first-child {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    &:last-child {
+        border: 2px solid $border-grey;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    &:hover {
+        background: rgba($btn-blue,.2);
+    }
+}
+
+.selected {
+    background: $btn-blue;
+    color: $base-white;
+    &:hover {
+        background: $btn-blue;
+        color: $base-white;
+    }
+}
+
+@media(max-width: 750px){
+    .filter {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .localFilter {
+        width: 30%;
+        margin-right: 20px;
+        .select {
+            margin-bottom: 0;
+            font-size: 18px;
+        }
+    }
+    .brandsFilter {
+        width: 30%;
+        position: relative;
+        .brandsOpen {
+            display: block;
+            width: 90%;
+            padding: 10px 20px;
+            border: 2px solid $border-grey;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .brandsContainer {
+            position: absolute;
+            top: 30px;
+            right: 0;
+            left: 0;
+            padding-left: 0;
+            .brandItem {
+               background: $base-grey;
+            }
+        }
+    }
+}
+
+@media(max-width: 600px) {
+    .localFilter .select {
+        font-size: 12px;
+    }
+    .brandsFilter {
+        .brandsOpen {
+            font-size: 12px;
+        }
+        .brandsContainer .brandItem {
+            height: 30px;
+            font-size: 10px;
+        }
+    }
+}
+
+@media(max-width: 430px) {
+    .localFilter {
+        width: 40%;
+    }
+    .brandsFilter {
+        width: 40%;
+    }
+}

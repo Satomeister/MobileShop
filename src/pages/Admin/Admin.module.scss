@@ -1,0 +1,56 @@
+@import '../../cssModules/vars.module';
+
+.admin {
+    display: flex;
+    width: 100%;
+    max-width: 1370px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+}
+
+.form {
+    width: 30%;
+}
+
+input[id='brand'] {
+    display: block;
+    width: 200px;
+    height: 30px;
+    border: 1px solid $border-grey;
+    border-radius: 0;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+input[id='photo'] {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    margin-top: 6px;
+    margin-bottom: 20px;
+}
+
+.textarea, .input {
+    width: 100%;
+    border: 1px solid $border-grey;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+.orders {
+    border-collapse: collapse;
+    margin-left: 20px;
+}
+
+td, th {
+    border: 1px solid $border-grey;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: $base-grey;
+}

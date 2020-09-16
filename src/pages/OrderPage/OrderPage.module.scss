@@ -1,0 +1,197 @@
+@import "../../cssModules/vars.module";
+
+.orderPage {
+    width: 100%;
+    max-width: 1370px;
+    margin: 0 auto;
+}
+
+.checkout {
+    display: flex;
+    width: 100%;
+}
+
+.mainTitle {
+    margin-top: 10px;
+    border-bottom: 2px solid $border-grey;
+    font-size: 50px;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.title {
+    margin-top: 10px;
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.contacts {
+    width: 50%;
+    margin-left: 30px;
+}
+
+.form {
+    padding-bottom: 20px;
+    label {
+        font-weight: 500;
+        color: rgba($font-black, .6);
+    }
+    input {
+        width: 40%;
+        height: 35px;
+        border: 1px solid $border-grey;
+        margin-top: 6px;
+        margin-bottom: 10px;
+        padding-left: 7px;
+        border-radius: 4px;
+        font-size: 16px;
+        color: rgba($font-black, .8);
+    }
+}
+
+.order {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    padding: 10px;
+    border: 1px solid rgba($font-black, .1);
+    border-radius: 10px;
+    background: rgba($border-grey, .3);
+}
+
+.goods {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-top: 2px solid $border-grey;
+    border-radius: 5px;
+    background: $base-white;
+    &:first-child {
+        padding: 0;
+    }
+    .img {
+        display: block;
+        max-height: 80px;
+        width: 40px;
+        margin-left: 20px;
+    }
+    .cardTitle {
+        width: 40%;
+        font-size: 18px;
+        color: $font-blue;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+    .cardInfo {
+        width: 13%;
+        text-align: center;
+        .carInfoTitle {
+            display: block;
+            font-size: 13px;
+            color: rgba($font-black,.7);
+        }
+        .carInfoValue {
+            font-size: 17px;
+        }
+    }
+}
+
+.cost {
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 500;
+    color: $green;
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: $base-white;
+    background: $btn-blue;
+    transition: all .2s;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0 0 10px $btn-blue;
+    }
+}
+
+.checkoutSuccess {
+    width: 500px;
+    height: 100px;
+    margin: 40px auto;
+    border-radius: 20px;
+    background: rgba($green, .3);
+    text-align: center;
+    span {
+        display: block;
+        font-size: 25px;
+        color: $font-black;
+    }
+    a {
+        display: block;
+        padding-top: 10px;
+        font-size: 20px;
+        color: $font-black;
+    }
+}
+
+@media (max-width: 800px) {
+    .mainTitle {
+        margin-bottom: 0;
+        border-bottom: 0;
+    }
+    .checkout {
+        flex-direction: column-reverse;
+    }
+    .contacts {
+        width: 100%;
+    }
+    .title {
+        margin-left: 20px;
+    }
+    .order {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        padding: 0;
+        border: none;
+        border-top: 1px solid rgba($font-black, .1);
+        border-bottom: 1px solid rgba($font-black, .1);
+        border-radius: 0;
+        background: rgba($border-grey, .3);
+    }
+}
+
+@media (max-width: 600px) {
+    .goods {
+        .cardTitle {
+            margin-left: 5px;
+            font-size: 15px;
+        }
+        .img {
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .goods {
+        .cardTitle {
+            width: 35%;
+            font-size: 13px;
+        }
+        .img {
+            margin-left: 0;
+        }
+    }
+}

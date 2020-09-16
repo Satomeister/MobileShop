@@ -1,0 +1,132 @@
+@import "../../cssModules/vars.module";
+
+.commentsContainer {
+    margin-top: 20px;
+    border-top: 2px solid $border-grey;
+}
+
+.title {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    color: $font-black;
+}
+
+.comments {
+   padding-left: 0;
+}
+
+.comment {
+    list-style-type: none;
+    margin: 20px 0;
+    border: 1px solid $border-grey;
+    border-radius: 3px;
+}
+
+.commentTop {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-bottom: 1px solid $border-grey;
+    .user {
+        font-size: 20px;
+        font-weight: 500;
+        color: $font-black;
+    }
+    .createdAt {
+        color: $font-black;
+        padding-right: 20px;
+    }
+    .deleteBtn {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+        :hover {
+            transform: scale(1.02);
+        }
+    }
+}
+
+.body {
+    padding: 15px 10px;
+    font-size: 17px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    color: $font-black;
+}
+
+.formTitle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 20px 10px;
+    border: 1px solid $border-grey;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: 500;
+    background: rgba($border-grey, .3);
+    color: $font-black;
+}
+
+.commentModal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.2);
+}
+
+.modal {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px $font-black;
+    background: $base-grey;
+    transform: translateY(-15%);
+}
+
+.form {
+    width: 90%;
+    margin: 0 auto;
+    textarea {
+        width: 100%;
+        border: 3px solid $border-grey;
+        border-radius: 4px;
+        margin-top: 6px;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        font-size: 18px;
+        resize: none;
+        outline: none;
+    }
+}
+
+@media (max-width: 850px) {
+    .formTitle span {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 400px) {
+    .commentTop {
+        .user {
+            font-size: 17px;
+        }
+        .createdAt {
+            font-size: 13px;
+            white-space: nowrap;
+        }
+    }
+}
